@@ -1,0 +1,14 @@
+<div class="container" id="js-container">
+  <canvas class="canvas" id="js-canvas" width="300" height="300" 
+    (mousedown)="handleMouseDown($event)"
+    (mouseup)="handleMouseUp($event)"
+    (mousemove)="handleMouseMove($event)"
+    (mouseover)="handleMouseMove($event)"
+   >
+  </canvas>
+  <form class="form" *ngIf="isVisible">
+    <h2>Congragulations!</h2>
+    <h2>You have won</h2>
+    <h1>1Lakh Rupees!</h1>
+  </form>
+</div>
