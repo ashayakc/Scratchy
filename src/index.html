@@ -2,11 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Scratchcard</title>
+  <title>Kabbage</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function () {
+          OneSignal.init({
+              appId: "18a75c9c-5d79-42fe-908e-1896f7481143",
+          });
+      });
+  </script>
 </head>
 <body>
   <app-root></app-root>
