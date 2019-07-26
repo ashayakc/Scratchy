@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Kabbage</title>
@@ -10,15 +11,23 @@
 
   <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
   <script>
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(function () {
-          OneSignal.init({
-              appId: "18a75c9c-5d79-42fe-908e-1896f7481143",
-          });
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function () {
+      OneSignal.init({
+        appId: "18a75c9c-5d79-42fe-908e-1896f7481143",
       });
+    });
   </script>
 </head>
+
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="color: #4CAF50">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/kabbagelogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Hermes
+    </a>
+  </nav>
   <app-root></app-root>
 </body>
+
 </html>
