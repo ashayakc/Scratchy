@@ -1,7 +1,4 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
-//import { DialogComponent } from '@syncfusion/ej2-angular-popups';
-//import { EmitType } from '@syncfusion/ej2-base';
-//import {MatDialogRef, MAT_DIALOG_DATA, MatDialog} from  '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -10,31 +7,9 @@ import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  //constructor(private  dialogRef:  MatDialogRef<CardComponent>, @Inject(MAT_DIALOG_DATA) public  data:  any) { }
-  constructor(){}
+   constructor(){}
 
-  
 
-/*
-@ViewChild('confirmDialog')
-    public confirmDialog: DialogComponent;
-    public confirmHeader: string = 'Delete Multiple Items';
-    public confirmCloseIcon: Boolean = true;
-    public confirmWidth: string = '400px';
-     public animationSettings: Object = { effect: 'None' };
-    public target: string = '.control-section';
- 
-   public confirmDlgBtnClick: EmitType<object> = () => {
-        this.confirmDialog.hide();
-    }
- 
-    public confirmDlgButtons: Object[] = [{ click: this.confirmDlgBtnClick.bind(this), buttonModel: { content: 'Yes',     isPrimary: true } }, { click: this.confirmDlgBtnClick.bind(this), buttonModel: { content: 'No' } }];
- 
-    // While clicking confirm button, open the confirm Dialog
-    public confirmBtnClick: EmitType<object> = () => {
-        this.confirmDialog.show();
-    }
-*/
   isDrawing: boolean;
   lastPoint: any;
   container: any = document.getElementById('js-container');
@@ -42,9 +17,9 @@ export class CardComponent implements OnInit {
   ctx: any;
   image: HTMLImageElement = new Image();
   brush: HTMLImageElement = new Image();
-  isVisible: boolean = true;  
+  isVisible: boolean = true;
   canvasWidth: any;
-  canvasHeight: any; 
+  canvasHeight: any;
 
   ngOnInit() {
     this.image.src = 'https://files.slack.com/files-pri/T0KDNTZ1N-FLUPKLA5V/image.png';

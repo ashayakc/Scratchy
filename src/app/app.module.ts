@@ -12,13 +12,15 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/dialog';
 import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
+import { PayOptionComponent } from './pay-option/pay-option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     CustomerListComponent,
-    CardOptionsComponent
+    CardOptionsComponent,
+    PayOptionComponent
   ],
   imports: [
     BrowserModule,

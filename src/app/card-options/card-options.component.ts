@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/dialog';
 import { CardComponent } from '../card/card.component';
 import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-options',
@@ -25,11 +26,8 @@ export class CardOptionsComponent implements OnInit {
   giftCards :String = "";
   giftCard :String = "";
   
-
-  //constructor(private  dialog:  MatDialog) {
-    //this.payload = {};
-  //}
-  constructor(private dialog: MatDialog) {
+ 
+  constructor(private dialog: MatDialog,private readonly _router: Router) {
      this.payload = {};
    }
 
@@ -66,12 +64,10 @@ export class CardOptionsComponent implements OnInit {
    
     }
 
-    let dialog = this.dialog.open(CardComponent, {});
-    //this.dialog.open(CardComponent,{ data: {
-      //message:  "Error!!!"
-     // }});
-
+    //let dialog = this.dialog.open(CardComponent, {});
+    
     console.log(this.payload);
+    this._router.navigate(['/pay-option']);
   }
 
 
