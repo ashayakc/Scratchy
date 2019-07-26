@@ -6,17 +6,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
+import { CardOptionsComponent } from './card-options/card-options.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    CardOptionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    DialogModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

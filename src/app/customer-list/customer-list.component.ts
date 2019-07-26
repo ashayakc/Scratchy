@@ -13,9 +13,13 @@ export class CustomerListComponent {
     {id: 3, name: 'Ashay', email: 'ashayakc@kabbage.com', category: 'Second Loan'},
     {id: 4, name: 'Ankita', email: 'akumari@kabbage.com', category: 'Faster EMI Payments'},
     {id: 5, name: 'Mahi', email: 'mshaik@kabbage.com', category: 'Second Loan'},
-    {id: 6, name: 'Ravi', email: 'rgunasekaran@kabbage.com', category: 'Faster EMI Payments'},
+    {id: 6, name: 'Ravi', email: 'rgunasekaran@kabbage.com', category: 'Faster EMI Payments'}
   ];
 
-  headElements = ['#', 'Name', 'Email', 'Category'];
+  headElements = ['#', 'Name', 'Email', 'Category','Gift Option'];
+
+  private showCardModal = function() {
+    alert('hi');
+  }
 
 }
