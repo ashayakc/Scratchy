@@ -1,37 +1,73 @@
 <div class="container">  
-  <form id="contact" action="" method="post" class = "col-12">
+  <!--<form id="contact" action="" method="post" class = "col-12">-->
+  <div id="contact" action="" class = "col-12">
     <h3>Gift Options Form</h3>
     <h4>Select gift options:</h4>
 
     <div class="form-row">
       <fieldset>
         <label class="col-sm-4 col-form-label"  for="name">Customer Id: </label>
-        <input type="text" placeholder="Customer Id" class="form-control col-sm-10" name="name" id="name" value ="121326868"/>
+        <input type="text" placeholder="Customer Id" class="form-control col-sm-10" name="custId" id="custId" value ="121326868" [(ngModel)] = "custId"/>
       </fieldset>
     </div>
 
     <div class="form-row">
       <fieldset>
         <label class="col-sm-4 col-form-label"  for="email">Email : </label>
-        <input type="text" placeholder="Your Email Address" class="form-control col-sm-10" name="email" id="name">
+        <input type="text" placeholder="Customer's Email Address" class="form-control col-sm-10" name="email" id="emailId" [(ngModel)] = "emailId">
       </fieldset>
     </div>
 
     <div class="form-row">
       <fieldset>
-        <label class="col-sm-4 col-form-label"  for="category">Category : </label>
-        <select class="form-control col-sm-10">
-            <option value="betterLuch">Better Luck</option>
-            <option value="Dollars">Dollars</option>
-            <option value="giftCards">Gift Cards</option>
-            <option value="kabbageGoodies">Kabbage Goodies</option>
-        </select>
+        <label class="col-sm-4 col-form-label"  for="category">Gift Options : </label>
+            <select class="form-control col-sm-10" [(ngModel)]="giftOption" [value]="betterLuck">
+              <option [attr.selected] = "ctg.name == giftOptions"
+                      *ngFor="let ctg of giftOptions"
+                      [ngValue]="ctg.id">
+                      {{ctg.name}}
+              </option>
+            </select>
       </fieldset>
     </div>
 
+    <div class="form-row" *ngIf="giftOption == 'dollars'">
+      <fieldset>
+        <label class="col-sm-8 col-form-label"  for="email">Enter the amount : </label>
+        <input type="text" placeholder="Enter the amount" class="form-control col-sm-10" name="amount" id="amount" [(ngModel)] = "amount">
+      </fieldset>
+    </div>
+
+    <div class="form-row" *ngIf="giftOption == 'giftCards'">
+      <fieldset>
+        <label class="col-sm-4 col-form-label"  forn="category">Category : </label>
+            <select class="form-control col-sm-10" [(ngModel)]="giftCard" [value]="1">
+              <option [attr.selected] = "opl.name == giftVouchers"
+                      *ngFor="let opl of giftVouchers"
+                      [ngValue]="opl.id">
+                      {{opl.name}}
+              </option>
+            </select>
+      </fieldset>
+    </div>
+
+    <div class="form-row" *ngIf="giftOption == 'kbgGood'">
+      <fieldset>
+        <label class="col-sm-4 col-form-label"  forn="category">Gift Options : </label>
+            <select class="form-control col-sm-10" [(ngModel)]="kbgGood" [value]="1">
+              <option [attr.selected] = "opl1.name == kbgGoodies"
+                      *ngFor="let opl1 of kbgGoodies"
+                      [ngValue]="opl1.id">
+                      {{opl1.name}}
+              </option>
+            </select>
+      </fieldset>
+    </div>
+
+
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" (click) ="sendNotification()">Send</button>
     </fieldset>
     <p class="copyright">Designed by <a href="" target="_blank" title="Colorlib">Hermes Team</a></p>
-  </form>
+  </div>
 </div>

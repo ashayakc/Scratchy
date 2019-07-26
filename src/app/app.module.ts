@@ -8,6 +8,7 @@ import { CardComponent } from './card/card.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DialogModule } from '@syncfusion/ej2-angular-popups';
 import { CardOptionsComponent } from './card-options/card-options.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardOptionsComponent } from './card-options/card-options.component';
     BrowserModule,
     AppRoutingModule,
     DialogModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
