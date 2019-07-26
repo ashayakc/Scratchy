@@ -9,6 +9,9 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DialogModule } from '@syncfusion/ej2-angular-popups';
 import { CardOptionsComponent } from './card-options/card-options.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/dialog';
+import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -22,10 +25,16 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     DialogModule,
     HttpClientModule,
-    FormsModule
-
+    FormsModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+		MatInputModule,
+		MatDialogModule,
+		MatProgressSpinnerModule,
+		MatButtonModule,
+		FormsModule
   ],
-  providers: [],
+  providers: [MatDialog,{provide: MatDialogRef, useValue: {}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

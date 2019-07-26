@@ -142,3 +142,8 @@ fieldset {
 :-ms-input-placeholder {
   color: #888;
 }
+
+.gift-img {
+    height :30px;
+    width: 30px;
+}

@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { DialogComponent } from '@syncfusion/ej2-angular-popups';
-import { EmitType } from '@syncfusion/ej2-base';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
+//import { DialogComponent } from '@syncfusion/ej2-angular-popups';
+//import { EmitType } from '@syncfusion/ej2-base';
+//import {MatDialogRef, MAT_DIALOG_DATA, MatDialog} from  '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -9,7 +10,10 @@ import { EmitType } from '@syncfusion/ej2-base';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  //constructor(private  dialogRef:  MatDialogRef<CardComponent>, @Inject(MAT_DIALOG_DATA) public  data:  any) { }
+  constructor(){}
+
+  
 
 /*
 @ViewChild('confirmDialog')

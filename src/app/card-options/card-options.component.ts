@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/dialog';
+import { CardComponent } from '../card/card.component';
+import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
 
 @Component({
   selector: 'card-options',
@@ -23,8 +26,10 @@ export class CardOptionsComponent implements OnInit {
   giftCard :String = "";
   
 
-
-  constructor() {
+  //constructor(private  dialog:  MatDialog) {
+    //this.payload = {};
+  //}
+  constructor(private dialog: MatDialog) {
      this.payload = {};
    }
 
@@ -60,6 +65,11 @@ export class CardOptionsComponent implements OnInit {
       giftCard : this.giftCard
    
     }
+
+    let dialog = this.dialog.open(CardComponent, {});
+    //this.dialog.open(CardComponent,{ data: {
+      //message:  "Error!!!"
+     // }});
 
     console.log(this.payload);
   }
