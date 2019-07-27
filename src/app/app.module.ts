@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/dialog';
 import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
 import { PayOptionComponent } from './pay-option/pay-option.component';
+import { CustomerListService } from './customer-list/customer-list.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { PayOptionComponent } from './pay-option/pay-option.component';
 		MatButtonModule,
 		FormsModule
   ],
-  providers: [MatDialog,{provide: MatDialogRef, useValue: {}}],
+  providers: [MatDialog,{provide: MatDialogRef, useValue: {}},CustomerListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
