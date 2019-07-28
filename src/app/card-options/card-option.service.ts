@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class CardOptionService {
 
   private giftOption: string;
-  private giftValue: string;
+  private giftValue: string = "100";
 
   constructor() {
       this.giftOption = "Dollars";

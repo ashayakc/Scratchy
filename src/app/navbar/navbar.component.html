@@ -1,0 +1,37 @@
+<!--<nav class="navbar navbar-light bg-dark">
+  <span class="navbar-brand mb-0 h1 text-light">Navbar By Gautam</span>  
+</nav>-->
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+<a class="navbar-brand" href="#">
+      <img src="/assets/kabbagelogo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Hermes
+    </a>
+  <div class="container-fluid px-0">
+    <div class="row w-100">
+      <!--<div class="col-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation" (click)="isShown = !isShown" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>-->
+
+      <div class="col-10">
+        <div class="collapse justify-content-end navbar-collapse" [ngClass]="{ 'show': isShown }" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink="/" (click)="isShown = false" >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/card-options" (click)="isShown = false" >Options</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/pay-option" (click)="isShown = false" >Payment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/card" (click)="isShown = false" >Card</a>  
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

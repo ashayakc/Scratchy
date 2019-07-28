@@ -23,7 +23,7 @@ export class CardOptionsComponent implements OnInit {
   emailId : string = "";
   mount : string = "";
   giftOption : string = "dollars";
-  amount : string = "";
+  amount : string = "100";
   custId : string = "21314544";
   giftCards :string = "";
   giftCard :string = "";
@@ -53,10 +53,11 @@ export class CardOptionsComponent implements OnInit {
     ];
 
     this.kbgGoodies = [
-      { id: 'tshirt', name: 'Kabbage T-shirt' },
-      { id: 'kbgMug', name: 'Kababge Mug' },
-      { id: 'kbgBag', name: 'Kabbage Bag' }
+      { id: 'kbgBag', name: 'Kabbage Bag', src:'/assets/kbg-bag2.png' },
+      { id: 'kbgHoodie', name: 'Kababge Hoodie', src: '/assets/hoodie.png' },
+      { id: 'kbgJkt', name: 'Kabbage Jacket', src : '/assets/kbg-jacket.png'}
     ];
+
   }
 
   sendNotification() {
@@ -70,7 +71,7 @@ export class CardOptionsComponent implements OnInit {
           this.giftValue = this.giftVouchers.find(x => x.id === this.giftCard).name;
           break;
       case  'kbgGood' :
-              this.giftValue = this.kbgGoodies.find(x => x.id === this.kbgGood).name;
+              this.giftValue = this.kbgGoodies.find(x => x.id === this.kbgGood).src;
               break;
       default :
               this.giftValue = 'betterLuck';
@@ -94,6 +95,8 @@ export class CardOptionsComponent implements OnInit {
     this._router.navigate(['/pay-option']);
   }
 
-
+  onSelectionChange(entry) {
+    this.kbgGood = entry.id;
+  }
 
 }

@@ -14,6 +14,9 @@ import { MatDialogModule, MatDialog , MatDialogRef } from  '@angular/material/di
 import { MatInputModule,MatProgressSpinnerModule,MatButtonModule } from '@angular/material';
 import { PayOptionComponent } from './pay-option/pay-option.component';
 import { CustomerListService } from './customer-list/customer-list.service';
+import { AppHeaderComponent } from './app-header/app-header.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CustomerListService } from './customer-list/customer-list.service';
     CardComponent,
     CustomerListComponent,
     CardOptionsComponent,
-    PayOptionComponent
+    PayOptionComponent,
+    AppHeaderComponent,
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
