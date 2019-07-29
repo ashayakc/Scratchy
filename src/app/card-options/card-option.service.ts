@@ -1,31 +1,31 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class CardOptionService {
 
-  private giftOption: string;
-  private giftValue: string = "100";
+    private giftOption: string;
+    private giftValue: string = "100";
 
-  constructor() {
-      this.giftOption = "Dollars";
-      this.giftValue = "100";
-  }
+    constructor() {
+        this.giftOption = "Dollars";
+        this.giftValue = "100";
+    }
 
-  public setGiftOption(val: string): void {
-      this.giftOption = val;
-  }
+    public setGiftOption(val: string): void {
+        localStorage.setItem('giftOption', val);
+    }
 
-  public getGiftOption(): string {
-      return this.giftOption;
-  }
+    public getGiftOption(): string {
+        return localStorage.getItem('giftOption') || 'Dollars';
+    }
 
-  public setGiftValue(val: string): void {
-    this.giftValue = val;
-}
+    public setGiftValue(val: string): void {
+        localStorage.setItem('giftValue', val);
+    }
 
-public getGiftValue(): string {
-    return this.giftValue;
-}
+    public getGiftValue(): string {
+        return localStorage.getItem('giftValue') || '100';
+    }
 }

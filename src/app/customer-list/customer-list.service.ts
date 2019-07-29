@@ -14,18 +14,18 @@ export class CustomerListService {
   }
 
   public setCustName(val: string): void {
-      this.custName = val;
+      localStorage.setItem('name', val);
   }
 
   public getCustName(): string {
-      return this.custName;
+      return localStorage.getItem('name');
   }
 
   public setCustEmail(val: string): void {
-    this.custEmail = val;
+    localStorage.setItem('email', val);
 }
 
 public getCustEmail(): string {
-    return this.custEmail;
+    return localStorage.getItem('email');
 }
 }
