@@ -6,7 +6,7 @@ import { CardOptionsComponent } from './card-options/card-options.component';
 
 const routes: Routes = [
   { path: 'customers', component: CustomerListComponent },
-  { path :'card-options', component: CardOptionsComponent},
+  { path :'cardOptions', component: CardOptionsComponent},
   { path: '', component: CardComponent },
 ];
 

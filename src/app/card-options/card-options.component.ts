@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../service';
 
 @Component({
   selector: 'card-options',
@@ -21,10 +22,8 @@ export class CardOptionsComponent implements OnInit {
   custId : String = "21314544";
   giftCards :String = "";
   giftCard :String = "";
-  
 
-
-  constructor() {
+  constructor(private _service: ConfigService) {
      this.payload = {};
    }
 
@@ -58,12 +57,10 @@ export class CardOptionsComponent implements OnInit {
       amount : this.amount,
       kbgGood : this.kbgGood,
       giftCard : this.giftCard
-   
     }
 
     console.log(this.payload);
+    this._service.updatePayload(JSON.stringify(this.payload));
+    this._service.sendPushNotification("Ashay is a good boy");
   }
-
-
-
 }

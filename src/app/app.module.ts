@@ -9,6 +9,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { DialogModule } from '@syncfusion/ej2-angular-popups';
 import { CardOptionsComponent } from './card-options/card-options.component';
 import { FormsModule } from '@angular/forms';
+import { ConfigService } from './service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
 
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

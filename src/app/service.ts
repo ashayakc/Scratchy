@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class ConfigService {
   constructor(private http: HttpClient) { }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'Basic NTViZjdkNmQtZDJhMy00ZjE5LWFhNzktNWIyMjdmZjU1ZjFm'
+    })
+  };
 
   sendMail(mailId: string, category: string) {
       this.http.post('http://localhost:5000/api/mail/send', {
@@ -18,14 +25,25 @@ export class ConfigService {
         "included_segments": ["Subscribed Users"],
         "data": {"foo": "bar"},
         "contents": {"en": content}
-      }));
+      }), this.httpOptions)
+      .subscribe(
+        (val) => {
+            console.log("POST call successful value returned in body", 
+                        val);
+        },
+        response => {
+            console.log("POST call in error", response);
+        },
+        () => {
+            console.log("The POST observable is now completed.");
+        });
   }
 
-  updateGiftId(giftId: string) {
-    localStorage.setItem('giftId', giftId);
+  updatePayload(payload: any) {
+    localStorage.setItem('payload', payload);
   }
 
-  getGiftId() {
-    return localStorage.getItem('giftId');
+  getPayload() {
+    return localStorage.getItem('payload');
   }
 }
