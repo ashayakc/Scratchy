@@ -17,6 +17,7 @@ import { CustomerListService } from './customer-list/customer-list.service';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CardPopupComponent } from './card-popup/card-popup.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     PayOptionComponent,
     AppHeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardPopupComponent
   ],
   imports: [
     BrowserModule,
