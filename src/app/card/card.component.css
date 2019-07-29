@@ -23,3 +23,34 @@ body {
   .form {
     padding: 20px;
   }
+
+  .bg-img{
+    background-image: url("/assets/cardBackground.JPG");
+    height: 392px;
+    width: 389px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .cvs-ht {
+    margin-left: -15px;
+  }
+  .item-ctr{
+    text-align: center;
+    margin-top: 92px;
+    color:#4CAF50;
+  }
+  .pos-abs{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 121px;
+  }
+
+  .gift-img {
+    height :55px;
+    width: 55px;
+}
+
+  

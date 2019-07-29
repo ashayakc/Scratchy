@@ -1,24 +1,22 @@
-<!--
-<div class=”control-section”>
-    <ejs-dialog #confirmDialog [buttons]='confirmDlgButtons' [visible]='hidden' [header]='confirmHeader' [animationSettings]='animationSettings' [showCloseIcon]='confirmCloseIcon' [target]='target'  [width]='confirmWidth'>
-        <ng-template #content>
-            <span>Are you sure you want to permanently delete these items ?</span>
-        </ng-template>
-    </ejs-dialog>
-</div>
--->
-
-<div class="container" id="js-container">
-  <canvas class="canvas" id="js-canvas" width="400" height="400" 
+<div class="container bg-img" id="js-container">
+  <canvas class="canvas cvs-ht" id="js-canvas" width="400" height="400" 
     (mousedown)="handleMouseDown($event)"
     (mouseup)="handleMouseUp($event)"
     (mousemove)="handleMouseMove($event)"
     (mouseover)="handleMouseMove($event)"
    >
   </canvas>
-  <form class="form" *ngIf="isVisible">
-    <h2>Congragulations!</h2>
-    <h2>You have won</h2>
-    <h1>1Lakh Rupees!</h1>
-  </form>
+  <div class="item-ctr">
+    <form class="form" *ngIf="isVisible">
+      <h4>Congragulations!</h4>
+      <h4>You have won</h4>
+      <h4>{{giftOption}}</h4>
+      <h4 *ngIf="!(giftOption === 'Kabbage Goodies')">{{giftValue}}</h4>
+      <img *ngIf="giftOption === 'Kabbage Goodies'" src ={{giftValue}} alt ={{giftOption}} class ="gift-img" />
+    </form>
+  </div>
 </div>
+
+<a href="https://www.kabbage.com/" target="_blank">
+  <div class ="btn btn-lg btn-success pos-abs">Refer your friend</div>
+</a>

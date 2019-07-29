@@ -1,4 +1,19 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Niramit:400,500,700i');  
 /*
 @import "../node_modules/@syncfusion/ej2/material.css";
 */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+app-root{  
+    font-family: Niramit;  
+}  
+  
+h1{  
+font-weight: 500;  
+font-style:italic;  
+} 
+
+.content {
+    min-height: calc(100vh - 70px);
+  }

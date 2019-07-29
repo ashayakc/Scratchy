@@ -1,6 +1,10 @@
+
+
 <div class="container">
+
+  <div class="card card-body bg-light margin-15">Customers List suggested for gift Options : </div>
   <table class="table" mdbTable>
-    <thead class="thead-dark">
+    <thead class="thead-light">
       <tr>
         <th *ngFor="let head of headElements" scope="col">{{head}} </th>
       </tr>
@@ -11,8 +15,9 @@
         <td>{{el.name}}</td>
         <td>{{el.email}}</td>
         <td>{{el.category}}</td>
-        <td> <Button class = "btn btn-link" (click)="showCardModal()"> Send Link </Button> </td>
+        <td> <Button class = "btn btn-link" (click)="giftOptions(el.email)"> Gift Options </Button> </td>
       </tr>
     </tbody>
   </table>
 </div>
+<app-footer ></app-footer>

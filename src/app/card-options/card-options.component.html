@@ -1,4 +1,16 @@
-<div class="container">  
+<div class ="content">
+<div class="container fl-left margin-left-50">
+  
+
+<div class="card card-body bg-light card-tile ">
+ <h3> Let's Flash some Goodies!  </h3> 
+ <span class="glyphicon glyphicon-hand-right"> </span> 
+  
+  </div>
+<!--<img src="https://uploads.toptal.io/blog/image/91509/toptal-blog-image-1438754691344-81b7402b311d05d42d7f6801e1943dc3.gif" alt="Post flash web animation" class="is-scrolled is-scrolling img-ht">-->
+<img src="/assets/flashGift.gif" alt="Post flash web animation" class="is-scrolled is-scrolling img-ht">
+</div>
+<div class="container ">  
   <!--<form id="contact" action="" method="post" class = "col-12">-->
   <div id="contact" action="" class = "col-12">
     <h3>Gift Options Form</h3>
@@ -14,7 +26,7 @@
     <div class="form-row">
       <fieldset>
         <label class="col-sm-4 col-form-label"  for="email">Email : </label>
-        <input type="text" placeholder="Customer's Email Address" class="form-control col-sm-10" name="email" id="emailId" [(ngModel)] = "emailId">
+        <input type="text" placeholder="Customer's Email Address" [(ngModel)]="custEmail" class="form-control col-sm-10" name="email" id="emailId" [(ngModel)] = "emailId">
       </fieldset>
     </div>
 
@@ -50,7 +62,7 @@
             </select>
       </fieldset>
     </div>
-
+<!--
     <div class="form-row" *ngIf="giftOption == 'kbgGood'">
       <fieldset>
         <label class="col-sm-4 col-form-label"  forn="category">Gift Options : </label>
@@ -63,11 +75,32 @@
             </select>
       </fieldset>
     </div>
-
+-->
+    <div class="form-row "  *ngIf="giftOption == 'kbgGood'">
+      <fieldset>
+        <label class="col-sm-4 col-form-label"  forn="category">Gift Options 1: </label>
+        <div class = "form-control img-div col-sm-10  ">
+            <span *ngFor="let entry of kbgGoodies">
+                      <input type="radio" name="radiogroup" 
+                          [checked]="idx === 0" 
+                          [value]="entry.id" 
+                          (change)="onSelectionChange(entry)"/>
+                    <img src ={{entry.src}} alt ={{entry.name}} class ="gift-img" />
+              </span>
+            <!--
+            <input type="radio" value="value1" name="group2">  <img src ="/assets/kbg-bag2.png" alt ="kbg-bag2" class ="gift-img" /> 
+            <input type="radio" value="value2" name="group2">  <img src ="/assets/hoodie.png" alt ="kbg-jacket" class ="gift-img" /> 
+            <input type="radio" value="value3" name="group2">  <img src ="/assets/kbg-jacket.png" alt ="hoodie" class ="gift-img" /> 
+          -->
+          </div>
+      </fieldset>
+    </div>
 
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" (click) ="sendNotification()">Send</button>
+      <button name="submit" type="submit" class="form-control col-sm-10" id="contact-submit" data-submit="...Sending" (click) ="sendNotification()">Send</button>
     </fieldset>
-    <p class="copyright">Designed by <a href="" target="_blank" title="Colorlib">Hermes Team</a></p>
+    <!--<p class="copyright">Designed by <a href="" target="_blank" title="Colorlib">Hermes Team</a></p> -->
   </div>
+</div>
+
 </div>

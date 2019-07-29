@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CustomerListService } from './customer-list.service';
 
 @Component({
   selector: 'app-customer-list',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent {
+
+  constructor(private readonly _router: Router,private custService : CustomerListService) {}
 
   elements: any = [
     {id: 1, name: 'Rajesh', email: 'rkolaru@kabbage.com', category: 'Second Loan'},
@@ -18,8 +22,9 @@ export class CustomerListComponent {
 
   headElements = ['#', 'Name', 'Email', 'Category','Gift Option'];
 
-  private showCardModal = function() {
-    alert('hi');
+  private giftOptions = function(val:string) {
+    this.custService.setCustEmail(val);
+    this._router.navigate(['/card-options']);
   }
 
 }
