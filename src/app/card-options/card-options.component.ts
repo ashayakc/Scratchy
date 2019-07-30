@@ -33,7 +33,7 @@ export class CardOptionsComponent implements OnInit {
   
  
   constructor(private dialog: MatDialog,private readonly _router: Router,private custService : CustomerListService,
-              private giftOptionService :CardOptionService) {
+              private giftOptionService :CardOptionService, private service: ConfigService) {
      this.payload = {};
    }
 
@@ -93,7 +93,12 @@ export class CardOptionsComponent implements OnInit {
       giftValue : this.giftValue
     }
     console.log(this.payload);
-    this._router.navigate(['/pay-option']);
+    var category = (this.custEmail === "rkolaru@kabbage.com" || this.custEmail === "ashayakc@kabbage.com" 
+      || this.custEmail === "mshaik@kabbage.com") ? 
+      '1': '2';
+    this.service.sendMail(this.custEmail, category);
+    confirm("Notification has been sent!");
+    this._router.navigate(['/customers']);
   }
 
   onSelectionChange(entry) {
