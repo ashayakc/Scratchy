@@ -16,7 +16,15 @@ export class ConfigService {
       this.http.post('http://localhost:5000/api/mail/send', {
           'mailId': mailId,
           'Category': category
-      });
+      }).subscribe((val) => {
+        console.log("mail sent successfully", val);
+      },
+      response => {
+        console.log("Mail send error", response);
+    },
+    () => {
+        console.log("Mail send is now completed.");
+    });
   }
 
   sendPushNotification(content: string) {

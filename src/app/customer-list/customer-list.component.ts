@@ -12,12 +12,12 @@ export class CustomerListComponent {
   constructor(private readonly _router: Router,private custService : CustomerListService) {}
 
   elements: any = [
-    {id: 1, name: 'Rajesh', email: 'rkolaru@kabbage.com', category: 'Second Loan'},
-    {id: 2, name: 'Gautham', email: 'gbharti@kabbage.com', category: 'Faster EMI Payments'},
-    {id: 3, name: 'Ashay', email: 'ashayakc@kabbage.com', category: 'Second Loan'},
-    {id: 4, name: 'Ankita', email: 'akumari@kabbage.com', category: 'Faster EMI Payments'},
-    {id: 5, name: 'Mahi', email: 'mshaik@kabbage.com', category: 'Second Loan'},
-    {id: 6, name: 'Ravi', email: 'rgunasekaran@kabbage.com', category: 'Faster EMI Payments'}
+    {id: 1, name: 'Rajesh', email: 'rkolaru@kabbage.com', category: 'Another Loan'},
+    {id: 2, name: 'Gautham', email: 'gbharti@kabbage.com', category: 'Early EMI Payments'},
+    {id: 3, name: 'Ashay', email: 'ashayakc@kabbage.com', category: 'Another Loan'},
+    {id: 4, name: 'Ankita', email: 'akumari@kabbage.com', category: 'Early EMI Payments'},
+    {id: 5, name: 'Mahi', email: 'mshaik@kabbage.com', category: 'Another Loan'},
+    {id: 6, name: 'Ravi', email: 'rgunasekaran@kabbage.com', category: 'Early EMI Payments'}
   ];
 
   headElements = ['#', 'Name', 'Email', 'Category','Gift Option'];
